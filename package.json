@@ -1,0 +1,19 @@
+{
+  "name": "test-tecnico-target",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx ts-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2"
+  }
+}

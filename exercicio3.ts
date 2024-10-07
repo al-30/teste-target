@@ -3,11 +3,8 @@ interface Faturamento {
   valor: number;
 }
 
-interface Distribuidora {
-  faturamento_diario: Faturamento[];
-}
-function faturamentosValidos(dados: Distribuidora): Faturamento[] {
-  const faturamentoDiario = dados.faturamento_diario.filter((item) => item.valor > 0);
+function faturamentosValidos(dados: Faturamento[]): Faturamento[] {
+  const faturamentoDiario = dados.filter((item) => item.valor > 0);
   return faturamentoDiario;
 }
 function menorValor(faturamento: Faturamento[]): number {
@@ -56,7 +53,7 @@ function diasMaiorQueMedia(faturamento: Faturamento[]): number {
   return diasSuperiorMedia;
 }
 
-function resumo(dados: Distribuidora) {
+function resumo(dados: Faturamento[]) {
   const faturamento = faturamentosValidos(dados);
 
   return {
